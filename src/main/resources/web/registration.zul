@@ -1,0 +1,35 @@
+<zk>
+    <window title="Registration form" width="500px" border="normal" apply="com.martynasvq.zkstarter.composers.RegistrationForm">
+        <grid hflex="1">
+            <auxhead>
+                <auxheader colspan="2" label="Register"></auxheader>
+            </auxhead>
+            <columns visible="false">
+                <column/>
+                <column/>
+            </columns>
+            <rows>
+                <row>
+                    Name: <textbox id="nameBox" hflex="1" constraint="no empty"></textbox>
+                </row>
+                <row>
+                    Gender: <radiogroup id="radioBtn"><radio label="Male" value="male"/><radio label="Female" value="female"/></radiogroup>
+                </row>
+                <row>
+                    Birthday: <datebox hflex="1" id="bbox" constraint="no future, no today, no empty"></datebox>
+                </row>
+                <row spans="2" align="center">
+                    <hlayout>
+                    <checkbox id="terms"/>Accept T&amp;Cs
+                    </hlayout>
+                </row>
+                <row spans="2" align="right">
+                    <hlayout>
+                        <button id="resetBtn" label="Reset" onClick=''></button>
+                        <button id="submitBtn" label="Submit" disabled="true"></button>
+                    </hlayout>
+                </row>
+            </rows>
+        </grid>
+    </window>
+</zk>

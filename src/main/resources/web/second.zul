@@ -1,0 +1,40 @@
+<zk>
+    <?page title="play 2"?>
+    <borderlayout hflex="1" vflex="1">
+    <center>
+        <window title="Hello ZK - playground center!" border="normal" >
+            You are using ZK version <label value="${session.webApp.version}"/><separator/>
+            <button label="Say Hi!" onClick='alert("abc")'></button>
+            <button label="Notification" onClick='Clients.showNotification("Clicked");'></button>
+            <button label="Say Hi!" onClick='Messagebox.show("Clicked");'></button><separator></separator>
+
+            <textbox id="input" onChange="result.setValue(input.getValue())"></textbox><space/><button label="Copy" onClick="result.setValue(input.getValue())"></button> <separator></separator>
+            <label id="result"></label><separator></separator>
+
+            <label value="${self.parent.title}"></label>
+            <zscript> Date now = new Date();</zscript>
+            <datebox value="${now}"></datebox>
+        </window>
+    </center>
+    <west>
+    <window title="Hello ZK - playground west!" border="normal">
+        You are using ZK version <label value="${session.webApp.version}"/><separator/>
+        <button label="Say Hi!" onClick='alert("abc")'></button>
+        <button label="Notification" onClick='Clients.showNotification("Clicked");'></button>
+        <button label="Say Hi!" onClick='Messagebox.show("Clicked");'></button><separator></separator>
+
+        <textbox id="input" onChange="result.setValue(input.getValue())"></textbox><space/><button label="Copy" onClick="result.setValue(input.getValue())"></button> <separator></separator>
+        <label id="result"></label><separator></separator>
+
+        <label value="${self.parent.title}"></label>
+        <zscript> Date now = new Date();</zscript>
+        <datebox value="${now}"></datebox>
+    </window>
+    </west>
+        <south>
+            <!-- Won't work - EE edition only -->
+<!--            <apply templateURI="~./template.zul"></apply>-->
+            <include src="~./template.zul"></include>
+        </south>
+    </borderlayout>
+</zk>

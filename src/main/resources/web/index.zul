@@ -15,8 +15,7 @@
 
 
     </window>
-    <window title="Hello ZK - playground!" border="normal">
-        You are using ZK version <label value="${session.webApp.version}"/><separator/>
+    <window border="normal">
         <button label="Say Hi!" onClick='alert("abc")'></button>
         <button label="Notification" onClick='Clients.showNotification("Clicked");'></button>
         <button label="Say Hi!" onClick='Messagebox.show("Clicked");'></button><separator></separator>
@@ -27,5 +26,11 @@
         <label value="${self.parent.title}"></label>
         <zscript> Date now = new Date();</zscript>
         <datebox value="${now}"></datebox>
+    </window>
+    <window title="x" border="normal" apply="com.martynasvq.zkstarter.composers.CalculatorComposer">
+        <intbox id="first"></intbox>
+        <intbox id="second"></intbox>
+        <intbox id="result"></intbox>
+        <button id="mainbtn" label="This"></button>
     </window>
 </zk>

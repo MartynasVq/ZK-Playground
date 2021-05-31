@@ -1,0 +1,21 @@
+<window title="Grid" border="normal">
+    <grid>
+        <columns menupopup="auto">
+            <column label="Author" sort="auto"></column>
+            <column label="Title"></column>
+            <column label="Publisher"></column>
+        </columns>
+        <rows>
+            <row>
+                <label value="Martynas"></label>
+                <label value="ZKOSS"></label>
+                <label value="Java"></label>
+            </row>
+            <row>
+                <label value="artynas"></label>
+                <label value="ZKOSS"></label>
+                <label value="Java"></label>
+            </row>
+        </rows>
+    </grid>
+</window>

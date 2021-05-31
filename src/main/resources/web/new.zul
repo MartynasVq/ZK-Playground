@@ -1,0 +1,5 @@
+<zk>
+<window title="x" border="normal" apply="com.martynasvq.zkstarter.composers.Test">
+    <button id="btn" label="This"></button>
+</window>
+</zk>

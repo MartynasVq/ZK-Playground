@@ -1,0 +1,19 @@
+<zk>
+    <listbox>
+        <listitem label="${each}" forEach="1,2,3"></listitem>
+    </listbox>
+    <listbox apply="com.martynasvq.zkstarter.composers.Labels">
+        <listitem label="${each}" forEach="${$composer.array}"></listitem>
+    </listbox>
+<separator></separator>
+    <listbox apply="com.martynasvq.zkstarter.composers.Labels" multiple="true">
+        <listhead columnshide="false">
+            <listheader label="First"></listheader>
+            <listheader label="Second"></listheader>
+        </listhead>
+        <listitem forEach="${$composer.map}">
+            <listcell label="${each.getKey()}"></listcell>
+            <listcell label="${each.getValue()}"></listcell>
+        </listitem>
+    </listbox>
+</zk>

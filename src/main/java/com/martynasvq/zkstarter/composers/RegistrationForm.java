@@ -3,6 +3,7 @@ package com.martynasvq.zkstarter.composers;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.*;
 
 import java.sql.Date;
@@ -33,6 +34,7 @@ public class RegistrationForm extends SelectorComposer<Window> {
 
     @Listen("onClick=#terms")
     public void confirmAccepted() {
+        Clients.alert("Accepted");
         if(terms.isChecked()) {
             submitBtn.setDisabled(false);
         } else {

@@ -17,5 +17,29 @@ public class IndexController {
         return "registration";
     }
 
+    @GetMapping({"/new"})
+    String test() {
+        return "new";
+    }
+
+    @GetMapping({"/grid"})
+    String grid() {
+        return "grid";
+    }
+
+    @GetMapping({"/simpletree"})
+    String simpletree() {
+        return "simpletree";
+    }
+
+    @GetMapping({"/upload"})
+    String upload() {
+        return "upload";
+    }
+
+    @GetMapping({"/foreach"})
+    String foreach() {
+        return "foreach";
+    }
 
 }

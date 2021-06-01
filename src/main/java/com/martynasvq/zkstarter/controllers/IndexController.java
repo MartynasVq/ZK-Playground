@@ -42,4 +42,9 @@ public class IndexController {
         return "foreach";
     }
 
+    @GetMapping({"/mvvmiteration"})
+    String mvvmiteration() {
+        return "mvvmiteration";
+    }
+
 }

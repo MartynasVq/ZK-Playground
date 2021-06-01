@@ -1,0 +1,16 @@
+<zk>
+    <window border="normal" viewModel="@id('vm') @init('com.martynasvq.zkstarter.viewmodels.IterationModel')" >
+        <listbox model="@bind(vm.wordList)" emptyMessage="No data found.">
+            <listhead>
+                <listheader label="Word"></listheader>
+                <listheader label="Action"></listheader>
+            </listhead>
+            <template name="model" var="item">
+                <listitem>
+                    <listcell label="@load(item)" visible="true" ></listcell>
+                    <listcell><button label="Delete" onClick="@command('deleteItem', item=item)"/></listcell>
+                </listitem>
+            </template>
+        </listbox>
+    </window>
+</zk>
